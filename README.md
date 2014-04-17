@@ -1,35 +1,27 @@
-# o-panel
+# o-panel [![Build Status](https://travis-ci.org/Financial-Times/o-panel.png?branch=master)](https://travis-ci.org/Financial-Times/o-panel)
 
 ___
 Content module with a heading and one or more panels.
 ___
 
-Status: Gathering requirements...
-
-## Example use case
-
-![FT.com rail module](https://github.com/Financial-Times/o-panel/raw/master/files/rail-module.png "FT.com rail module")
-
-This module will provide styling for:
+__o-panel__ provides styling for:
 
 * Heading
 * Tabs (optional)
-* Tabpanels (minimum of 1)
+* Panel body (minimum of 1), but _not_ panel contents
 
-It will not provide the styling for the contents of the tabpanels.
+If tabs are used, then [o-tabs](http://registry.origami.ft.com/components/o-tabs)'s JavaScript must also be included in the page to provide the tabs' behaviour. __o-tabs__ is not a dependency of this module.
 
-[o-tabs](https://github.com/Financial-Times/o-tabs) will be used for the tabs' behaviour.
+If multiple panels are used, the module will be sized to accommodate the tallest panel, regardless of which panel is in view.
+In other words, any content below will not shift up and down as the panel in view is changed.
 
-This module will ensure that any content below the __o-panel__ will not shift up and down due to variations of the __o-panel__ tabpanels' heights.
-
-
-## Draft markup
+## Markup
 
 __Without tabs__
 
 ```html
 <div data-o-component="o-panel" data-o-version="1.0.0" class="o-panel">
-    <h3 class="o-panel__heading">Title</h3>
+    <h3 class="o-panel__heading">Heading</h3>
     <div class="o-panel__body">
         o-panel body content
     </div>
@@ -40,20 +32,28 @@ __With tabs__
 
 ```html
 <div data-o-component="o-panel" data-o-version="1.0.0" class="o-panel">
-    <h3 class="o-panel__heading">Title</h3>
+    <h3 class="o-panel__heading">Heading</h3>
     <ul data-o-component="o-tabs" data-o-version="1.0.0" class="o-tabs" role="tablist">
         <li role="tab"><a href="#oPanelContent1">Tab 1</a></li>
         <li role="tab"><a href="#oPanelContent2">Tab 2</a></li>
         <li role="tab"><a href="#oPanelContent3">Tab 3</a></li>
     </ul>
-    <div id="oPanelContent1" class="o-panel__body o-tabs__tabpanel" role="tabpanel">
+    <div id="oPanelContent1" class="o-panel__body">
         o-panel body content 1
     </div>
-    <div id="oPanelContent2" class="o-panel__body o-tabs__tabpanel" role="tabpanel">
+    <div id="oPanelContent2" class="o-panel__body">
         o-panel body content 2
     </div>
-    <div id="oPanelContent3" class="o-panel__body o-tabs__tabpanel" role="tabpanel">
+    <div id="oPanelContent3" class="o-panel__body">
         o-panel body content 3
     </div>
 </div>
 ```
+
+### Core experience
+
+No _tabs_ will be shown, and _panel bodies_ will all be shown one below the other.
+
+### Primary experience
+
+_Tabs_ will be shown (if declared in markup) and will be functional. Only the _panel body_ for the selected _tab_ will be shown.

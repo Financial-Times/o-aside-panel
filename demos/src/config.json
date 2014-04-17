@@ -1,0 +1,13 @@
+{
+    "options": {
+        "sass": "demos/src/demo.scss"
+    },
+    "demos": {
+        "single": {
+            "template": "demos/src/single.mustache"
+        },
+        "multiple": {
+            "template": "demos/src/multiple.mustache"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "o-panel",
+    "main": [
+        "main.scss"
+    ],
+    "ignore": [
+        "files/",
+        ".travis.yml"
+    ],
+    "dependencies": {
+        "o-colors": "^2.3.8",
+        "o-ft-typography": "^1.8.0"
+    },
+    "ci": {
+        "travis": "https://api.travis-ci.org/repos/Financial-Times/o-panel/builds.json"
+    }
+}

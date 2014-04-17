@@ -1,0 +1,84 @@
+@include oPanelSelectors(o-panel) {
+  position: relative;
+  background-color: oColorsGetColorFor(panel-body box page, background);
+  overflow: hidden;
+  .o-tabs {
+    display: none;
+  }
+  .o-tabs.o-tabs--js {
+    display: block;
+    margin: 0;
+    padding: 0;
+    float: right;
+    font-family: $o-fonts-bentonsans-normal;
+    font-size: 11px;
+    text-transform: none;
+    [role=tab] {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 0;
+      min-height: 28px;
+      list-style-type: none;
+      a {
+        color: oColorsGetColorFor(link, text);
+        text-decoration: none;
+        &:hover {
+          color: oColorsGetColorFor(link-hover, text);
+        }
+      }
+      &[aria-selected=true] {
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-image: url('data:image/gif;base64,R0lGODlhEQAJAKIAAAAAABEREaelm/fq2QAAAAAAAAAAAAAAACH5BAkAAAQALAAAAAARAAkAAAMcSLoq/FAMB+O4tLbLs+VdJYGgR4xkuaCpyrZlAgA7');
+        a {
+          font-weight: normal;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+@include oPanelSelectors(o-panel__header) {
+  @extend %o-ft-typography-heading-large;
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-left: 10px;
+  padding-bottom: 0;
+  overflow: hidden;
+  background-color: oColorsGetColorFor(panel-heading box page, background);
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAEUlEQVQImWNYvnT2t5c3cJEAYL0XF6uvDusAAAAASUVORK5CYII=');
+}
+
+@include oPanelSelectors(o-panel__heading) {
+  float: left;
+  margin: 0 0 8px 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  a {
+    @extend %o-ft-typography-heading-large__link;
+  }
+}
+
+// Float and the margin-left/left 100% positioning is used to ensure o-panel root element is sized to tallest panel
+
+@include oPanelSelectors(o-panel__body) {
+  box-sizing: border-box;
+  padding: 10px;
+  & + .o-panel__body {
+    border-top: 1px dotted oColorsGetColorFor(panel-heading dialog, border);
+  }
+  &[role=tabpanel] {
+    float: left;
+    position: relative;
+    margin-left: -100%;
+    border-top: none;
+    width: 100%;
+    &[aria-expanded=true] {
+      left: 100%;
+    }
+  }
+}

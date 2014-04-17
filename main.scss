@@ -1,0 +1,10 @@
+$o-panel-is-silent: true !default;
+@import "o-colors/main";
+@import "o-ft-typography/main";
+
+@if (not $o-panel-is-silent) {
+  @include oFtTypographyIncludeFont(heading);
+}
+
+@import "src/scss/mixins";
+@import "src/scss/panel";
