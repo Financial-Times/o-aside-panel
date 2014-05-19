@@ -33,7 +33,7 @@ __With tabs__
 ```html
 <div data-o-component="o-panel" data-o-version="1.0.0" class="o-panel">
     <h3 class="o-panel__heading">Heading</h3>
-    <ul data-o-component="o-tabs" data-o-version="1.0.0" class="o-tabs" role="tablist">
+    <ul data-o-component="o-tabs o-panel__tabs--theme" data-o-version="1.0.0" class="o-tabs" role="tablist">
         <li role="tab"><a href="#oPanelContent1">Tab 1</a></li>
         <li role="tab"><a href="#oPanelContent2">Tab 2</a></li>
         <li role="tab"><a href="#oPanelContent3">Tab 3</a></li>
@@ -49,6 +49,8 @@ __With tabs__
     </div>
 </div>
 ```
+
+Note that the `o-panel__tabs--theme` must also be set on the __o-tabs__ root element.
 
 ### Core experience
 

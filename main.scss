@@ -1,9 +1,15 @@
 $o-panel-is-silent: true !default;
 @import "o-colors/main";
+@import "o-fonts/main";
 @import "o-ft-typography/main";
 
 @if (not $o-panel-is-silent) {
   @include oFtTypographyIncludeFont(heading);
+  @include oFtTypographyIncludeFont(body);
+  body {
+    @extend %o-useragent-chrome;
+  }
+  @include oFtTypographyWebkitFontfix();
 }
 
 @import "src/scss/mixins";

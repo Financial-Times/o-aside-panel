@@ -2,16 +2,17 @@
   position: relative;
   background-color: oColorsGetColorFor(panel-body box page, background);
   overflow: hidden;
-  .o-tabs {
+  .o-panel__tabs--theme {
     display: none;
   }
-  .o-tabs.o-tabs--js {
+  .o-panel__tabs--theme[class*='--js'] {
     display: block;
     margin: 0;
     padding: 0;
     float: right;
-    font-family: $o-fonts-bentonsans-normal;
+    font-family: oFontsGetFontFamilyWithFallbacks(BentonSans);
     font-size: 11px;
+    font-weight: normal;
     text-transform: none;
     [role=tab] {
       display: inline-block;
@@ -20,7 +21,7 @@
       min-height: 28px;
       list-style-type: none;
       a {
-        color: oColorsGetColorFor(link, text);
+        color: oColorsGetColorFor(button-standard, text);
         text-decoration: none;
         &:hover {
           color: oColorsGetColorFor(link-hover, text);
@@ -31,6 +32,7 @@
         background-repeat: no-repeat;
         background-image: url('data:image/gif;base64,R0lGODlhEQAJAKIAAAAAABEREaelm/fq2QAAAAAAAAAAAAAAACH5BAkAAAQALAAAAAARAAkAAAMcSLoq/FAMB+O4tLbLs+VdJYGgR4xkuaCpyrZlAgA7');
         a {
+          pointer-events: none;
           font-weight: normal;
           color: #000;
         }
@@ -40,7 +42,7 @@
 }
 
 @include oPanelSelectors(o-panel__header) {
-  @extend %o-ft-typography-heading-large;
+  @extend %o-ft-typography-heading2;
   margin-bottom: 0;
   border-bottom: none;
   padding-left: 10px;
@@ -58,9 +60,6 @@
   padding: 0;
   font-size: inherit;
   line-height: inherit;
-  a {
-    @extend %o-ft-typography-heading-large__link;
-  }
 }
 
 // Float and the margin-left/left 100% positioning is used to ensure o-panel root element is sized to tallest panel
