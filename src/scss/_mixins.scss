@@ -2,9 +2,9 @@
   Wrap styles in SASS placeholder and CSS class (if not in silent mode)
   $name:             name of placeholder/class.
 */
-@mixin oPanelSelectors($name) {
+@mixin oAsidePanelSelectors($name) {
   $selectors: #{'%#{$name}'};
-  @if (not $o-panel-is-silent) {
+  @if (not $o-aside-panel-is-silent) {
     $selectors: append($selectors, #{'.#{$name}'}, comma);
   }
   #{$selectors} {

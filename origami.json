@@ -2,10 +2,10 @@
     "description": "Content panels",
     "origamiType": "module",
     "origamiVersion": 1,
-    "support": "https://github.com/Financial-Times/o-panel/issues",
+    "support": "https://github.com/Financial-Times/o-aside-panel/issues",
     "supportStatus": "active",
     "ci": {
-        "travis": "https://api.travis-ci.org/repos/Financial-Times/o-panel/builds.json"
+        "travis": "https://api.travis-ci.org/repos/Financial-Times/o-aside-panel/builds.json"
     },
     "demos": [
         "/demos/single.html",

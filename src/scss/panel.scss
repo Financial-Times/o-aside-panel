@@ -1,11 +1,11 @@
-@include oPanelSelectors(o-panel) {
+@include oAsidePanelSelectors(o-aside-panel) {
   position: relative;
   background-color: oColorsGetColorFor(panel-body box page, background);
   overflow: hidden;
-  .o-panel__tabs--theme {
+  .o-aside-panel__tabs--theme {
     display: none;
   }
-  .o-panel__tabs--theme[class*='--js'] {
+  .o-aside-panel__tabs--theme[class*='--js'] {
     display: block;
     margin: 0;
     padding: 0;
@@ -41,7 +41,7 @@
   }
 }
 
-@include oPanelSelectors(o-panel__header) {
+@include oAsidePanelSelectors(o-aside-panel__header) {
   @extend %o-ft-typography-heading2;
   margin-bottom: 0;
   border-bottom: none;
@@ -54,7 +54,7 @@
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAEUlEQVQImWNYvnT2t5c3cJEAYL0XF6uvDusAAAAASUVORK5CYII=');
 }
 
-@include oPanelSelectors(o-panel__heading) {
+@include oAsidePanelSelectors(o-aside-panel__heading) {
   float: left;
   margin: 0 0 8px 0;
   padding: 0;
@@ -62,12 +62,12 @@
   line-height: inherit;
 }
 
-// Float and the margin-left/left 100% positioning is used to ensure o-panel root element is sized to tallest panel
+// Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
 
-@include oPanelSelectors(o-panel__body) {
+@include oAsidePanelSelectors(o-aside-panel__body) {
   box-sizing: border-box;
   padding: 10px;
-  & + .o-panel__body {
+  & + .o-aside-panel__body {
     border-top: 1px dotted oColorsGetColorFor(panel-heading dialog, border);
   }
   &[role=tabpanel] {

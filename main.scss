@@ -1,9 +1,9 @@
-$o-panel-is-silent: true !default;
+$o-aside-panel-is-silent: true !default;
 @import "o-colors/main";
 @import "o-fonts/main";
 @import "o-ft-typography/main";
 
-@if (not $o-panel-is-silent) {
+@if (not $o-aside-panel-is-silent) {
   @include oFtTypographyIncludeFont(heading);
   @include oFtTypographyIncludeFont(body);
   body {
