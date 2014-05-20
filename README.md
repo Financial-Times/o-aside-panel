@@ -21,7 +21,9 @@ __Without tabs__
 
 ```html
 <div data-o-component="o-aside-panel" data-o-version="1.0.0" class="o-aside-panel">
-    <h3 class="o-aside-panel__heading">Heading</h3>
+    <div class="o-aside-panel__header">
+        <h3 class="o-aside-panel__heading">Heading <a href="#">Link</a></h3>
+    </div>
     <div class="o-aside-panel__body">
         o-aside-panel body content
     </div>
@@ -32,12 +34,14 @@ __With tabs__
 
 ```html
 <div data-o-component="o-aside-panel" data-o-version="1.0.0" class="o-aside-panel">
-    <h3 class="o-aside-panel__heading">Heading</h3>
-    <ul data-o-component="o-tabs o-aside-panel__tabs--theme" data-o-version="1.0.0" class="o-tabs" role="tablist">
-        <li role="tab"><a href="#oPanelContent1">Tab 1</a></li>
-        <li role="tab"><a href="#oPanelContent2">Tab 2</a></li>
-        <li role="tab"><a href="#oPanelContent3">Tab 3</a></li>
-    </ul>
+    <div class="o-aside-panel__header">
+        <h3 class="o-aside-panel__heading">Heading</h3>
+        <ul data-o-component="o-tabs" data-o-version="1.0.0" class="o-tabs o-aside-panel__tabs--theme" role="tablist">
+            <li role="tab"><a href="#oPanelContent1">Tab 1</a></li>
+            <li role="tab"><a href="#oPanelContent2">Tab 2</a></li>
+            <li role="tab"><a href="#oPanelContent3">Tab 3</a></li>
+        </ul>
+    </div>
     <div id="oPanelContent1" class="o-aside-panel__body">
         o-aside-panel body content 1
     </div>

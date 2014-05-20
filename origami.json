@@ -8,7 +8,15 @@
         "travis": "https://api.travis-ci.org/repos/Financial-Times/o-aside-panel/builds.json"
     },
     "demos": [
-        "/demos/single.html",
-        "/demos/multiple.html"
+        {
+            "path": "/demos/single.html",
+            "expanded": true,
+            "description": ""
+        },
+        {
+            "path": "/demos/multiple.html",
+            "expanded": true,
+            "description": ""
+        }
     ]
 }
