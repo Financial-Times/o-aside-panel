@@ -62,20 +62,30 @@
   line-height: inherit;
 }
 
-// Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
+// prevents momentary flash of all tabs
+.o--js {
+  @include oAsidePanelSelectors(o-aside-panel__body--tabpanel) {
+    display: none;
+  }
+}
 
+// Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
 @include oAsidePanelSelectors(o-aside-panel__body) {
   box-sizing: border-box;
   padding: 10px;
   & + .o-aside-panel__body {
     border-top: 1px dotted oColorsGetColorFor(panel-heading dialog, border);
   }
+
+
   &[role=tabpanel] {
     float: left;
     position: relative;
     margin-left: -100%;
     border-top: 0;
     width: 100%;
+    display: block;
+    
     &[aria-expanded=true] {
       left: 100%;
     }
