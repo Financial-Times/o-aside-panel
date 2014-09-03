@@ -1,6 +1,6 @@
 @include oAsidePanelSelectors(o-aside-panel) {
   position: relative;
-  background-color: oColorsGetColorFor(panel-body box page, background);
+  background-color: oColorsGetColorFor(o-aside-panel-body box page, background);
   overflow: hidden;
   .o-aside-panel__tabs--theme {
     display: none;
@@ -21,7 +21,7 @@
       min-height: 28px;
       list-style-type: none;
       a {
-        color: oColorsGetColorFor(button-standard, text);
+        color: oColorsGetColorFor(o-ft-buttons-standard body, text);
         text-decoration: none;
         &:hover {
           color: oColorsGetColorFor(link-hover, text);
@@ -34,7 +34,7 @@
         a {
           pointer-events: none;
           font-weight: normal;
-          color: #000000;
+          color: oColorsGetPaletteColor(black);
         }
       }
     }
@@ -48,7 +48,7 @@
   padding-left: 10px;
   padding-bottom: 0;
   overflow: hidden;
-  background-color: oColorsGetColorFor(panel-heading box page, background);
+  background-color: oColorsGetColorFor(o-aside-panel-heading box page, background);
   background-repeat: repeat-x;
   background-position: bottom left;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAEUlEQVQImWNYvnT2t5c3cJEAYL0XF6uvDusAAAAASUVORK5CYII=');
@@ -68,7 +68,7 @@
   box-sizing: border-box;
   padding: 10px;
   & + .o-aside-panel__body {
-    border-top: 1px dotted oColorsGetColorFor(panel-heading dialog, border);
+    border-top: 1px dotted oColorsGetColorFor(o-aside-panel-heading, border);
   }
   &[role=tabpanel] {
     float: left;

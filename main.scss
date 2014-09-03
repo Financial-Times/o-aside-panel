@@ -12,5 +12,6 @@ $o-aside-panel-is-silent: true !default;
   @include oFtTypographyWebkitFontfix();
 }
 
+@import "src/scss/color-use-cases";
 @import "src/scss/mixins";
 @import "src/scss/panel";
