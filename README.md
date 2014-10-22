@@ -20,7 +20,7 @@ In other words, any content below will not shift up and down as the panel in vie
 __Without tabs__
 
 ```html
-<div data-o-component="o-aside-panel" data-o-version="1.0.0" class="o-aside-panel">
+<div data-o-component="o-aside-panel" class="o-aside-panel">
     <div class="o-aside-panel__header">
         <h3 class="o-aside-panel__heading">Heading <a href="#">Link</a></h3>
     </div>
@@ -33,10 +33,10 @@ __Without tabs__
 __With tabs__
 
 ```html
-<div data-o-component="o-aside-panel" data-o-version="1.0.0" class="o-aside-panel">
+<div data-o-component="o-aside-panel" class="o-aside-panel">
     <div class="o-aside-panel__header">
         <h3 class="o-aside-panel__heading">Heading</h3>
-        <ul data-o-component="o-tabs" data-o-version="1.0.0" class="o-tabs o-aside-panel__tabs--theme" role="tablist">
+        <ul data-o-component="o-tabs" class="o-tabs o-aside-panel__tabs--theme" role="tablist">
             <li role="tab"><a href="#oPanelContent1">Tab 1</a></li>
             <li role="tab"><a href="#oPanelContent2">Tab 2</a></li>
             <li role="tab"><a href="#oPanelContent3">Tab 3</a></li>
@@ -56,10 +56,10 @@ __With tabs__
 
 Note that the `o-aside-panel__tabs--theme` must also be set on the __o-tabs__ root element.
 
-### Core experience
+## Core experience
 
 No _tabs_ will be shown, and _panel bodies_ will all be shown one below the other.
 
-### Primary experience
+## Primary experience
 
 _Tabs_ will be shown (if declared in markup) and will be functional. Only the _panel body_ for the selected _tab_ will be shown.
