@@ -67,7 +67,7 @@
 @include oAsidePanelSelectors(o-aside-panel__body) {
   box-sizing: border-box;
   padding: 10px;
-  & + .o-aside-panel__body {
+  .o-aside-panel__body {
     border-top: 1px dotted oColorsGetColorFor(o-aside-panel-heading, border);
   }
   &[role=tabpanel] {
