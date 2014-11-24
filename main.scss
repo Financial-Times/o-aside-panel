@@ -9,8 +9,9 @@ $o-aside-panel-is-silent: true !default;
 }
 
 @import "src/scss/color-use-cases";
+@import "src/scss/panel";
 
 @import "src/scss/depreacted/mixins";
 @import "src/scss/depreacted/panel";
 
-@import "src/scss/panel";
+
