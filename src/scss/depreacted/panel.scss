@@ -1,12 +1,4 @@
-/**
- * @group o-aside-panel
- * @link http://registry.origami.ft.com/components/o-aside-panel
-**/
-
-/**
- * Main mixin for an aside panel
- */
-@mixin oAsidePanel {
+@include oAsidePanelSelectors(o-aside-panel) {
 	position: relative;
 	background-color: oColorsGetColorFor(o-aside-panel-body box page, background);
 	overflow: hidden;
@@ -49,11 +41,8 @@
 	}
 }
 
-/**
- * Apply to an aside header
- */
-@mixin oAsidePanelHeader {
-	@include oFtTypographyHeading2;
+@include oAsidePanelSelectors(o-aside-panel__header) {
+	@extend %o-ft-typography-heading2;
 	margin-bottom: 0;
 	border-bottom: 0;
 	padding-left: 10px;
@@ -65,11 +54,7 @@
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAEUlEQVQImWNYvnT2t5c3cJEAYL0XF6uvDusAAAAASUVORK5CYII=');
 }
 
-/**
- * Not sure what this is for...
- * @todo Why is this different from header?
- */
-@mixin oAsidePanelHeading {
+@include oAsidePanelSelectors(o-aside-panel__heading) {
 	float: left;
 	margin: 0 0 8px;
 	padding: 0;
@@ -77,11 +62,9 @@
 	line-height: inherit;
 }
 
-/**
- * Apply to the main body of the aside
- */
 // Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
-@mixin oAsidePanelBody {
+
+@include oAsidePanelSelectors(o-aside-panel__body) {
 	box-sizing: border-box;
 	padding: 10px;
 	.o-aside-panel__body {
@@ -98,21 +81,3 @@
 		}
 	}
 }
-
-// uncomment this when the deprecated stuff is removed as that also spits out these classes
-.o-aside-panel {
-	@include oAsidePanel;
- }
-
-.o-aside-panel__header {
-	@include oAsidePanelHeader;
-}
-
-.o-aside-panel__heading {
-	@include oAsidePanelHeading;
-}
-
-.o-aside-panel__body {
-	@include oAsidePanelBody;
-}
-
