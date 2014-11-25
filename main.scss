@@ -6,10 +6,6 @@ $o-aside-panel-is-silent: true !default;
 @if (not $o-aside-panel-is-silent) {
   @include oFtTypographyIncludeFont(heading);
   @include oFtTypographyIncludeFont(body);
-  body {
-    @extend %o-useragent-chrome;
-  }
-  @include oFtTypographyWebkitFontfix();
 }
 
 @import "src/scss/color-use-cases";
