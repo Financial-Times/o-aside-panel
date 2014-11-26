@@ -50,7 +50,7 @@
 }
 
 /**
- * Apply to an aside header
+ * Apply to an aside header block
  */
 @mixin oAsidePanelHeader {
 	@include oFtTypographyHeading2;
@@ -66,8 +66,7 @@
 }
 
 /**
- * Not sure what this is for...
- * @todo Why is this different from header?
+ * Styling for aside title
  */
 @mixin oAsidePanelHeading {
 	float: left;
@@ -99,7 +98,8 @@
 	}
 }
 
-// uncomment this when the deprecated stuff is removed as that also spits out these classes
+// uncomment the below when the deprecated stuff is removed as that also spits out these classes
+/*
 .o-aside-panel {
 	@include oAsidePanel;
 }
@@ -115,3 +115,4 @@
 .o-aside-panel__body {
 	@include oAsidePanelBody;
 }
+*/
