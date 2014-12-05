@@ -3,15 +3,13 @@ $o-aside-panel-is-silent: true !default;
 @import "o-fonts/main";
 @import "o-ft-typography/main";
 
-@if (not $o-aside-panel-is-silent) {
-  @include oFtTypographyIncludeFont(heading);
-  @include oFtTypographyIncludeFont(body);
+@if ($o-aside-panel-is-silent == false) {
+	@include oFtTypographyIncludeFont(heading);
+	@include oFtTypographyIncludeFont(body);
 }
 
 @import "src/scss/color-use-cases";
 @import "src/scss/panel";
 
-@import "src/scss/depreacted/mixins";
-@import "src/scss/depreacted/panel";
-
-
+@import "src/scss/deprecated/mixins";
+@import "src/scss/deprecated/panel";

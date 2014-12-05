@@ -1,0 +1,11 @@
+// Wrap styles in Sass placeholder and CSS class (if not in silent mode)
+// $name:             name of placeholder/class.
+@mixin oAsidePanelSelectors($name) {
+	$selectors: unquote('%#{$name}');
+	@if ($o-aside-panel-is-silent == false) {
+		$selectors: append($selectors, unquote('.#{$name}'), comma);
+	}
+	#{$selectors} {
+		@content;
+	}
+}

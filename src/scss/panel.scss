@@ -5,6 +5,9 @@
 
 /**
  * Main mixin for an aside panel
+ * @requires {function} oFontsGetFontFamilyWithFallbacks
+ * @requires {function} oColorsGetColorFor
+ * @requires {function} oColorsGetPaletteColor
  */
 @mixin oAsidePanel {
 	position: relative;
@@ -51,6 +54,8 @@
 
 /**
  * Apply to an aside header block
+ * @requires {mixin} oFtTypographyHeading2
+ * @requires {function} oColorsGetColorFor
  */
 @mixin oAsidePanelHeader {
 	@include oFtTypographyHeading2;
@@ -78,38 +83,44 @@
 
 /**
  * Apply to the main body of the aside
+ * @requires {function} oColorsGetColorFor
  */
 // Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
 @mixin oAsidePanelBody {
 	box-sizing: border-box;
 	padding: 10px;
+
 	.o-aside-panel__body {
 		border-top: 1px dotted oColorsGetColorFor(o-aside-panel-heading, border);
 	}
+
 	&[role=tabpanel] {
 		float: left;
 		position: relative;
 		margin-left: -100%;
 		border-top: 0;
 		width: 100%;
+
 		&[aria-expanded=true] {
 			left: 100%;
 		}
 	}
 }
 
-.o-aside-panel {
-	@include oAsidePanel;
-}
+@if ($o-aside-panel-is-silent == false) {
+	.o-aside-panel__header {
+		@include oAsidePanelHeader;
+	}
 
-.o-aside-panel__header {
-	@include oAsidePanelHeader;
-}
+	.o-aside-panel__heading {
+		@include oAsidePanelHeading;
+	}
 
-.o-aside-panel__heading {
-	@include oAsidePanelHeading;
-}
+	.o-aside-panel__body {
+		@include oAsidePanelBody;
+	}
 
-.o-aside-panel__body {
-	@include oAsidePanelBody;
+	.o-aside-panel {
+		@include oAsidePanel;
+	}
 }
