@@ -1,0 +1,17 @@
+@include oAsidePanelSelectors(o-aside-panel) {
+	@include oAsidePanel;
+}
+
+@include oAsidePanelSelectors(o-aside-panel__header) {
+	@include oAsidePanelHeader;
+}
+
+@include oAsidePanelSelectors(o-aside-panel__heading) {
+	@include oAsidePanelHeading;
+}
+
+// Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
+
+@include oAsidePanelSelectors(o-aside-panel__body) {
+	@include oAsidePanelBody;
+}

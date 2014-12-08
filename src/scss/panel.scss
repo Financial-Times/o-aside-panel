@@ -1,4 +1,15 @@
-@include oAsidePanelSelectors(o-aside-panel) {
+/**
+ * @group o-aside-panel
+ * @link http://registry.origami.ft.com/components/o-aside-panel
+**/
+
+/**
+ * Main mixin for an aside panel
+ * @requires {function} oFontsGetFontFamilyWithFallbacks
+ * @requires {function} oColorsGetColorFor
+ * @requires {function} oColorsGetPaletteColor
+ */
+@mixin oAsidePanel {
 	position: relative;
 	background-color: oColorsGetColorFor(o-aside-panel-body box page, background);
 	overflow: hidden;
@@ -41,8 +52,13 @@
 	}
 }
 
-@include oAsidePanelSelectors(o-aside-panel__header) {
-	@extend %o-ft-typography-heading2;
+/**
+ * Apply to an aside header block
+ * @requires {mixin} oFtTypographyHeading2
+ * @requires {function} oColorsGetColorFor
+ */
+@mixin oAsidePanelHeader {
+	@include oFtTypographyHeading2;
 	margin-bottom: 0;
 	border-bottom: 0;
 	padding-left: 10px;
@@ -54,7 +70,10 @@
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAEUlEQVQImWNYvnT2t5c3cJEAYL0XF6uvDusAAAAASUVORK5CYII=');
 }
 
-@include oAsidePanelSelectors(o-aside-panel__heading) {
+/**
+ * Styling for aside title
+ */
+@mixin oAsidePanelHeading {
 	float: left;
 	margin: 0 0 8px;
 	padding: 0;
@@ -62,22 +81,46 @@
 	line-height: inherit;
 }
 
+/**
+ * Apply to the main body of the aside
+ * @requires {function} oColorsGetColorFor
+ */
 // Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
-
-@include oAsidePanelSelectors(o-aside-panel__body) {
+@mixin oAsidePanelBody {
 	box-sizing: border-box;
 	padding: 10px;
+
 	.o-aside-panel__body {
 		border-top: 1px dotted oColorsGetColorFor(o-aside-panel-heading, border);
 	}
+
 	&[role=tabpanel] {
 		float: left;
 		position: relative;
 		margin-left: -100%;
 		border-top: 0;
 		width: 100%;
+
 		&[aria-expanded=true] {
 			left: 100%;
 		}
+	}
+}
+
+@if ($o-aside-panel-is-silent == false) {
+	.o-aside-panel__header {
+		@include oAsidePanelHeader;
+	}
+
+	.o-aside-panel__heading {
+		@include oAsidePanelHeading;
+	}
+
+	.o-aside-panel__body {
+		@include oAsidePanelBody;
+	}
+
+	.o-aside-panel {
+		@include oAsidePanel;
 	}
 }
