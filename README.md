@@ -63,3 +63,9 @@ No _tabs_ will be shown, and _panel bodies_ will all be shown one below the othe
 ## Primary experience
 
 _Tabs_ will be shown (if declared in markup) and will be functional. Only the _panel body_ for the selected _tab_ will be shown.
+
+----
+
+## Licence
+
+This software is published by the Financial Times under the [MIT licence](http://opensource.org/licenses/MIT).
