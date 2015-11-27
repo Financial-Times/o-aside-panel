@@ -5,60 +5,21 @@
 
 /**
  * Main mixin for an aside panel
- * @requires {function} oFontsGetFontFamilyWithFallbacks
  * @requires {function} oColorsGetColorFor
- * @requires {function} oColorsGetPaletteColor
  */
 @mixin oAsidePanel {
 	position: relative;
 	background-color: oColorsGetColorFor(o-aside-panel-body box page, background);
 	overflow: hidden;
-	.o-aside-panel__tabs--theme {
-		display: none;
-	}
-	.o-aside-panel__tabs--theme[data-o-tabs--js] {
-		display: block;
-		margin: 0;
-		padding: 0;
-		float: right;
-		font-family: oFontsGetFontFamilyWithFallbacks(BentonSans);
-		font-size: 11px;
-		font-weight: normal;
-		text-transform: none;
-		[role=tab] {
-			display: inline-block;
-			margin-right: 10px;
-			padding: 0;
-			min-height: 28px;
-			list-style-type: none;
-			a {
-				color: oColorsGetColorFor(o-ft-buttons-standard body, text);
-				text-decoration: none;
-				&:hover {
-					color: oColorsGetColorFor(link-hover, text);
-				}
-			}
-			&[aria-selected=true] {
-				background-position: bottom center;
-				background-repeat: no-repeat;
-				background-image: url('data:image/gif;base64,R0lGODlhEQAJAKIAAAAAABEREaelm/fq2QAAAAAAAAAAAAAAACH5BAkAAAQALAAAAAARAAkAAAMcSLoq/FAMB+O4tLbLs+VdJYGgR4xkuaCpyrZlAgA7');
-				a {
-					pointer-events: none;
-					font-weight: normal;
-					color: oColorsGetPaletteColor('black');
-				}
-			}
-		}
-	}
 }
 
 /**
  * Apply to an aside header block
- * @requires {mixin} oFtTypographyHeading2
+ * @requires {mixin} oTypographyHeading2
  * @requires {function} oColorsGetColorFor
  */
 @mixin oAsidePanelHeader {
-	@include oFtTypographyHeading2;
+	@include oTypographyHeading2;
 	margin-bottom: 0;
 	border-bottom: 0;
 	padding-left: 10px;
@@ -75,10 +36,10 @@
  */
 @mixin oAsidePanelHeading {
 	float: left;
-	margin: 0 0 8px;
+	margin: 8px 0;
 	padding: 0;
 	font-size: inherit;
-	line-height: inherit;
+	font-weight: inherit;
 }
 
 /**
@@ -89,10 +50,7 @@
 @mixin oAsidePanelBody {
 	box-sizing: border-box;
 	padding: 10px;
-
-	.o-aside-panel__body {
-		border-top: 1px dotted oColorsGetColorFor(o-aside-panel-heading, border);
-	}
+	border-top: 1px dotted oColorsGetColorFor(o-aside-panel-heading, border);
 
 	&[role=tabpanel] {
 		float: left;
