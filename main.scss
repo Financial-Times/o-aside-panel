@@ -1,15 +1,8 @@
 $o-aside-panel-is-silent: true !default;
 @import "o-colors/main";
 @import "o-fonts/main";
-@import "o-ft-typography/main";
-
-@if ($o-aside-panel-is-silent == false) {
-	@include oFtTypographyIncludeFont(heading);
-	@include oFtTypographyIncludeFont(body);
-}
+@import "o-typography/main";
 
 @import "src/scss/color-use-cases";
 @import "src/scss/panel";
-
-@import "src/scss/deprecated/mixins";
-@import "src/scss/deprecated/panel";
+@import "src/scss/tabs";
