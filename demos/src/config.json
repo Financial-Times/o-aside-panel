@@ -11,7 +11,7 @@
         {
             "name": "multiple",
             "template": "demos/src/multiple.mustache",
-            "dependencies": "o-fonts@^2.0.0,o-tabs@^2.1.0"
+            "dependencies": "o-tabs@^2.1.0"
         }
     ]
 }
