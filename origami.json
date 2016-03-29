@@ -7,7 +7,7 @@
 	"ci": {
 		"circle": "https://circleci.com/api/v1/project/Financial-Times/o-aside-panel"
 	},
-	"options": {
+	"demosDefaults": {
 		"sass": "demos/src/demo.scss",
 		"dependencies": "o-fonts@^2.0.0"
 	},
