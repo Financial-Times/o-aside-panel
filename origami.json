@@ -14,13 +14,13 @@
 	"demos": [
 		{
 			"name": "single",
-			"template": "/demos/src/single.mustache",
+			"template": "demos/src/single.mustache",
 			"expanded": true,
 			"description": ""
 		},
 		{
 			"name": "multiple",
-			"template": "/demos/src/multiple.mustache",
+			"template": "demos/src/multiple.mustache",
 			"expanded": true,
 			"dependencies": "o-tabs@^2.1.0",
 			"description": ""
