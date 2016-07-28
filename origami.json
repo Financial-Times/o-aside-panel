@@ -1,6 +1,7 @@
 {
 	"description": "Content panels",
 	"origamiType": "module",
+	"origamiCategory": "components",
 	"origamiVersion": 1,
 	"support": "https://github.com/Financial-Times/o-aside-panel/issues",
 	"supportStatus": "active",
