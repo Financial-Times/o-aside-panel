@@ -23,7 +23,7 @@ __Without tabs__
 ```html
 <div data-o-component="o-aside-panel" class="o-aside-panel">
     <div class="o-aside-panel__header">
-        <h3 class="o-aside-panel__heading">Heading <a href="#">Link</a></h3>
+        <h3 class="o-aside-panel__heading">Heading</h3>
     </div>
     <div class="o-aside-panel__body">
         o-aside-panel body content
@@ -37,7 +37,7 @@ __With tabs__
 <div data-o-component="o-aside-panel" class="o-aside-panel">
     <div class="o-aside-panel__header">
         <h3 class="o-aside-panel__heading">Heading</h3>
-        <ul data-o-component="o-tabs" class="o-tabs o-aside-panel__tabs--theme" role="tablist">
+        <ul data-o-component="o-tabs" class="o-tabs o-aside-panel__tabs" role="tablist">
             <li role="tab"><a href="#oPanelContent1">Tab 1</a></li>
             <li role="tab"><a href="#oPanelContent2">Tab 2</a></li>
             <li role="tab"><a href="#oPanelContent3">Tab 3</a></li>
