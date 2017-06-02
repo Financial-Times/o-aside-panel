@@ -9,6 +9,6 @@
   ],
   "dependencies": {
     "o-colors": "^4",
-    "o-typography": "^5.0.0"
+    "o-typography": "^5"
   }
 }
