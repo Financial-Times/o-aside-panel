@@ -85,7 +85,6 @@ _Tabs_ will be shown (if declared in markup) and will be functional. Only the _p
 That is to be expected for core experience.
 
 ## Migration guide
-_Migration guides are very important! Always include one for major releases. To create a codeblock that has diff highligting, use three backticks followed by the word diff_
 
 ### Migrating from 2.X.X to 3.X.X
 
