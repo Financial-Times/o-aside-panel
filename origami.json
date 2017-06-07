@@ -10,7 +10,7 @@
 	},
 	"demosDefaults": {
 		"sass": "demos/src/demo.scss",
-		"dependencies": "o-fonts@^2.0.0"
+		"dependencies": "o-fonts@^3"
 	},
 	"demos": [
 		{
@@ -23,7 +23,7 @@
 			"name": "multiple",
 			"template": "demos/src/multiple.mustache",
 			"expanded": true,
-			"dependencies": "o-tabs@^2.1.0",
+			"dependencies": "o-tabs@^4",
 			"description": ""
 		}
 	]

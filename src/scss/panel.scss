@@ -1,7 +1,7 @@
 /**
  * @group o-aside-panel
  * @link http://registry.origami.ft.com/components/o-aside-panel
-**/
+ */
 
 /**
  * Main mixin for an aside panel
@@ -15,11 +15,11 @@
 
 /**
  * Apply to an aside header block
- * @requires {mixin} oTypographyHeading2
+ * @requires {mixin} oTypographyDisplay
  * @requires {function} oColorsGetColorFor
  */
 @mixin oAsidePanelHeader {
-	@include oTypographyHeading2;
+	@include oTypographyDisplay($scale: 3, $line-height: 31px);
 	margin-bottom: 0;
 	border-bottom: 0;
 	padding-left: 10px;
@@ -44,19 +44,16 @@
 
 /**
  * Apply to the main body of the aside
- * @requires {function} oColorsGetColorFor
  */
-// Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
 @mixin oAsidePanelBody {
 	box-sizing: border-box;
 	padding: 10px;
-	border-top: 1px dotted oColorsGetColorFor(o-aside-panel-heading, border);
 
 	&[role=tabpanel] {
+		// Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
 		float: left;
 		position: relative;
 		margin-left: -100%;
-		border-top: 0;
 		width: 100%;
 
 		&[aria-expanded=true] {

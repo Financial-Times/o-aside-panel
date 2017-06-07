@@ -1,9 +1,18 @@
-# o-aside-panel [![Build Status](https://circleci.com/gh/Financial-Times/o-aside-panel.png?style=shield&circle-token=8e3fbf1e3a06d57c68bf34ab807beccc38ba913d)](https://circleci.com/gh/Financial-Times/o-aside-panel)
+o-aside-panel [![Build Status](https://circleci.com/gh/Financial-Times/o-aside-panel.png?style=shield&circle-token=8e3fbf1e3a06d57c68bf34ab807beccc38ba913d)]
+=================
 
-
-___
 Content module with a heading and one or more panels.
-___
+
+- [Usage](#usage)
+	- [Markup](#markup)
+	- [Sass](#sass)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [Migration guide](#migration-guide)
+- [Contact](#contact)
+- [Licence](#licence)
+
+## Usage
 
 __o-aside-panel__ provides styling for:
 
@@ -16,9 +25,9 @@ If tabs are used, then [o-tabs](http://registry.origami.ft.com/components/o-tabs
 If multiple panels are used, the module will be sized to accommodate the tallest panel, regardless of which panel is in view.
 In other words, any content below will not shift up and down as the panel in view is changed.
 
-## Markup
+### Markup
 
-__Without tabs__
+#### Without tabs
 
 ```html
 <div data-o-component="o-aside-panel" class="o-aside-panel">
@@ -31,7 +40,7 @@ __Without tabs__
 </div>
 ```
 
-__With tabs__
+#### With tabs
 
 ```html
 <div data-o-component="o-aside-panel" class="o-aside-panel">
@@ -57,6 +66,11 @@ __With tabs__
 
 Note that the `o-aside-panel__tabs--theme` must also be set on the __o-tabs__ root element.
 
+### Sass
+
+As with all Origami components, o-aside-panel has a [silent mode](http://origami.ft.com/docs/syntax/scss/#silent-styles). To use its compiled CSS (rather than using its mixins with your own Sass) set `$o-aside-panel-is-silent : false;` in your Sass before you import the o-aside-panel Sass.
+
+
 ## Core experience
 
 No _tabs_ will be shown, and _panel bodies_ will all be shown one below the other.
@@ -64,6 +78,23 @@ No _tabs_ will be shown, and _panel bodies_ will all be shown one below the othe
 ## Primary experience
 
 _Tabs_ will be shown (if declared in markup) and will be functional. Only the _panel body_ for the selected _tab_ will be shown.
+
+## Troubleshooting
+
+### No tabs are showing, all panels are being shown
+That is to be expected for core experience.
+
+## Migration guide
+
+### Migrating from 2.X.X to 3.X.X
+
+V2 -> V3 introduces the new majors of o-colors and o-typography. Updating to this new version will mean updating any other components that you have which are using o-colors or o-typography. There are no other breaking changes in this release.
+
+---
+
+## Contact
+
+If you have any questions or comments about this component, or need help using it, please either [raise an issue](https://github.com/Financial-Times/o-aside-panel/issues), visit [#ft-origami](https://financialtimes.slack.com/messages/ft-origami/) or email [Origami Support](mailto:origami-support@ft.com).
 
 ----
 
