@@ -13,9 +13,9 @@
 	display: none;
 
 	&[data-o-tabs--js] {
+		@include oTypographyDisplay($scale: -1, $line-height: 47px);
 		display: block;
 		float: right;
-		@include oTypographyDisplay($scale: -1, $line-height: 47px);
 		text-transform: none;
 		[role=tab] {
 			display: inline-block;
