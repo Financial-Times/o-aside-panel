@@ -16,13 +16,11 @@
 		{
 			"name": "single",
 			"template": "demos/src/single.mustache",
-			"expanded": true,
 			"description": ""
 		},
 		{
 			"name": "multiple",
 			"template": "demos/src/multiple.mustache",
-			"expanded": true,
 			"dependencies": "o-tabs@^4",
 			"description": ""
 		}
