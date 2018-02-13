@@ -18,11 +18,13 @@
 	},
 	"demos": [
 		{
+			"title": "Single",
 			"name": "single",
 			"template": "demos/src/single.mustache",
 			"description": ""
 		},
 		{
+			"title": "Multiple",
 			"name": "multiple",
 			"template": "demos/src/multiple.mustache",
 			"dependencies": "o-tabs@^4",
