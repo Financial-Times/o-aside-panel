@@ -1,6 +1,9 @@
-o-aside-panel [![Build Status](https://circleci.com/gh/Financial-Times/o-aside-panel.png?style=shield&circle-token=8e3fbf1e3a06d57c68bf34ab807beccc38ba913d)]
+o-aside-panel 
 =================
 
+This component has now been deprecated.
+
+---
 Content module with a heading and one or more panels.
 
 - [Usage](#usage)
